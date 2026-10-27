@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course de nuit – jeu de voiture gratuit en ligne</title>
+<meta name="description" content="Jeu de course gratuit sur navigateur : 500 niveaux, mode libre avec records, garage de 6 voitures. Joue sur téléphone ou ordinateur.">
+<meta name="theme-color" content="#10151c">
+<!-- ADSENSE : colle ici le code de vérification fourni par Google -->
+<style>
+:root{--bg:#10151c;--card:#1a212b;--ink:#f4ead5;--mut:#b9b2a2;--accent:#ff5a36;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Trebuchet MS",system-ui,sans-serif}
+header{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #2a323d}
+header b{font-size:20px}nav a{color:var(--ink);text-decoration:none;margin-right:14px;display:inline-block;padding:4px 0}nav a:hover{color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:28px 20px 56px}
+h1{font-size:34px;line-height:1.2;margin:.2em 0 .4em}h2{font-size:23px;margin-top:2em;scroll-margin-top:12px}
+p,li{color:#e6dec9}a{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#1a0d08;font-weight:700;padding:14px 30px;border-radius:12px;text-decoration:none;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{background:var(--card);border-radius:12px;padding:14px 16px}.card b{display:block;margin-bottom:4px}
+.sw{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+.game{display:block;margin:18px auto;width:min(100%,360px);aspect-ratio:9/16;border:0;border-radius:14px;background:#000}
+.ad{margin:26px 0;text-align:center}.ad:empty{display:none}.ad[data-on]::before{content:"Publicité";display:block;font-size:12px;color:var(--mut);margin-bottom:4px}
+footer{border-top:1px solid #2a323d;padding:20px;text-align:center;color:var(--mut);font-size:14px}footer a{color:var(--mut);margin:0 8px}
+</style></head><body>
+<header><b>🏎️ Course de nuit</b><nav><a href="#jeu">Jouer</a><a href="#voitures">Voitures</a><a href="#conseils">Conseils</a><a href="#apropos">À propos</a><a href="#confidentialite">Confidentialité</a></nav></header>
+<main>
+<h1>Course de nuit, le jeu de voiture gratuit</h1>
+<p>Évite le trafic, ramasse des pièces et débloque de nouvelles voitures. Joue directement dans ton navigateur, sur téléphone ou ordinateur, sans rien installer.</p>
+<div class="ad"></div>
+<h2 id="jeu">Jouer</h2>
+<iframe id="gf" class="game" title="Course de nuit"></iframe>
+<p>Sur téléphone, touche les boutons ◀ ▶ ou la moitié gauche ou droite de l’écran. Sur ordinateur, utilise les flèches du clavier ou A et D.</p>
+<h2>Ce que tu peux faire</h2>
+<div class="grid">
+<div class="card"><b>🏆 Championnat</b>500 niveaux de plus en plus rapides. Il y a toujours un passage libre et des pièces à ramasser.</div>
+<div class="card"><b>🛣️ Conduite libre</b>Trois difficultés (facile, moyen, difficile) et un record en mètres pour chacune.</div>
+<div class="card"><b>🚗 Garage</b>Gagne des pièces et achète six voitures, de plus en plus maniables.</div>
+</div>
+<h2>Comment jouer</h2>
+<ul><li>Ramasse les pièces dorées et évite toutes les autres voitures.</li>
+<li>En conduite libre, les flèches haut et bas (ou les boutons ▲ ▼) servent à accélérer et freiner.</li>
+<li>Un accident met fin à la partie : en championnat tu rejoues le niveau, en conduite libre ton record est enregistré.</li></ul>
+<h2 id="voitures">Les voitures du garage</h2>
+<p>Chaque voiture se débloque avec les pièces ramassées. Plus elle est chère, plus elle est maniable : elle change de voie plus vite, ce qui aide beaucoup dans les niveaux avancés.</p>
+<div class="grid">
+<div class="card"><b><span class="sw" style="background:#ff5a36"></span>Flamme</b>Gratuite · maniabilité 100 %. La voiture de départ.</div>
+<div class="card"><b><span class="sw" style="background:#2c6fd1"></span>Azur</b>100 pièces · maniabilité 110 %.</div>
+<div class="card"><b><span class="sw" style="background:#e8b923"></span>Taxi</b>250 pièces · maniabilité 120 %.</div>
+<div class="card"><b><span class="sw" style="background:#2f8f5b"></span>Forêt</b>450 pièces · maniabilité 130 %.</div>
+<div class="card"><b><span class="sw" style="background:#1d2b4f"></span>Phantom</b>700 pièces · maniabilité 140 %.</div>
+<div class="card"><b><span class="sw" style="background:#9a52e0"></span>Néon</b>1 000 pièces · maniabilité 150 %.</div>
+</div>
+<p>En championnat, des pièces apparaissent dans la voie libre de chaque rangée de voitures, et terminer un niveau rapporte 10 pièces. La conduite libre ne donne pas de pièces : elle sert à battre ses records.</p>
+<h2 id="conseils">Conseils pour battre ton record</h2>
+<p><b>Regarde loin devant.</b> Repère la voie libre de la rangée suivante avant même de passer la rangée actuelle. Elle ne se décale jamais de plus d’une voie d’une rangée à l’autre, tu peux donc toujours anticiper.</p>
+<p><b>Change de voie en avance.</b> Un changement de voie prend du temps, surtout quand la route va vite. Attendre le dernier moment est la première cause d’accident dans les hauts niveaux.</p>
+<p><b>Ne zigzague pas pour une pièce.</b> Les pièces sont toujours dans la voie libre : en suivant cette voie, tu les ramasses naturellement.</p>
+<p><b>Choisis la bonne voiture.</b> Vise Azur, puis Taxi, et garde tes pièces pour Forêt avant d’attaquer les niveaux au-delà de 50.</p>
+<p><b>En conduite libre,</b> commence en facile pour sentir le rythme et garde une vitesse constante : accélérer et freiner sans cesse fait perdre le repère des rangées.</p>
+<h2>Questions fréquentes</h2>
+<p><b>Le jeu est-il gratuit ?</b> Oui, entièrement.</p>
+<p><b>Ma progression est-elle sauvegardée ?</b> Oui, dans ton navigateur, sur ton appareil. Si tu effaces les données du site, elle disparaît.</p>
+<p><b>Puis-je jouer sur iPhone ou Android ?</b> Oui, ouvre simplement cette page dans ton navigateur. Tu peux aussi l’ajouter à l’écran d’accueil depuis le menu de ton navigateur.</p>
+<h2 id="apropos">À propos</h2>
+<p>Course de nuit est un jeu de voiture gratuit créé pour s’amuser : simple à prendre en main, difficile à maîtriser. Il évolue régulièrement : nouvelles voitures, nouveaux niveaux et améliorations. Le site est financé par de la publicité, ce qui permet de garder le jeu gratuit.</p>
+<h2 id="confidentialite">Politique de confidentialité</h2>
+<p><b>Données du jeu.</b> Ta progression (niveau, pièces, voitures, records) est enregistrée uniquement dans le stockage local de ton navigateur. Elle n’est pas envoyée à nos serveurs. Tu peux l’effacer en supprimant les données du site.</p>
+<p><b>Informations personnelles.</b> Le jeu ne demande ni compte, ni nom, ni adresse e-mail, et ne collecte pas sciemment d’informations sur les enfants.</p>
+<p><b>Publicité et cookies.</b> Ce site peut afficher des publicités fournies par des tiers, dont Google AdSense. Ces partenaires peuvent utiliser des cookies pour afficher des annonces en fonction de tes visites sur ce site et sur d’autres sites. Tu peux gérer ces préférences dans les <a href="https://adssettings.google.com">paramètres des annonces Google</a>.</p>
+<div class="ad"></div>
+</main>
+<footer><a href="#jeu">Jouer</a><a href="#voitures">Voitures</a><a href="#conseils">Conseils</a><a href="#apropos">À propos</a><a href="#confidentialite">Confidentialité</a><p>© 2026 Course de nuit</p></footer>
+<script type="text/plain" id="gsrc"><!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Course de nuit</title>
+<style>
+:root{--bg:#10151c;--ink:#f4ead5;--accent:#ff5a36;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Trebuchet MS",system-ui,sans-serif;display:flex;align-items:center;justify-content:center;touch-action:none;user-select:none;-webkit-user-select:none}
+.wrap{position:relative;height:100%;aspect-ratio:9/16;max-width:100%;max-height:100%}
+canvas{width:100%;height:100%;display:block;background:#2f5d50}
+.hide{display:none!important}
+.ov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;background:rgba(16,21,28,.82)}
+h1{margin:0;font-size:32px;letter-spacing:1px}
+p{margin:0;max-width:270px;line-height:1.45;font-size:15px}
+button{font:inherit;font-weight:700;font-size:17px;padding:12px 26px;border:0;border-radius:10px;background:var(--accent);color:#1a0d08;cursor:pointer}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+button:disabled{opacity:.45;cursor:default}
+.sec{background:rgba(244,234,213,.18);color:var(--ink)}
+#hud{position:absolute;top:10px;left:14px;right:14px;display:flex;justify-content:space-between;font-weight:700;font-size:17px;text-shadow:0 1px 3px #000;pointer-events:none}
+#menu{position:absolute;top:58px;left:50%;transform:translateX(-50%);font-size:13px;padding:6px 14px}
+#pad,#pad2{position:absolute;bottom:16px;display:flex;pointer-events:none}
+#pad{left:0;right:0;justify-content:space-between;padding:0 14px}
+#pad2{left:50%;transform:translateX(-50%);gap:10px;bottom:26px}
+.ar{pointer-events:auto;width:78px;height:78px;padding:0;font-size:30px;border-radius:50%;background:rgba(244,234,213,.2);color:var(--ink);border:2px solid rgba(244,234,213,.55);touch-action:none}
+.ar.sm{width:58px;height:58px;font-size:22px}
+.ar.on{background:rgba(255,90,54,.75)}
+#list{width:100%;max-height:62%;overflow-y:auto;display:flex;flex-direction:column;gap:8px;touch-action:pan-y}
+.row{display:flex;align-items:center;gap:12px;background:rgba(244,234,213,.1);border-radius:12px;padding:8px 12px;text-align:left}
+.row b{display:block;font-size:16px}.row small{opacity:.8}
+.row button{font-size:14px;padding:8px 14px;margin-left:auto;white-space:nowrap}
+</style></head><body>
+<div class="wrap">
+<canvas id="c" width="360" height="640"></canvas>
+<div id="hud"><span id="sc"></span><span id="bs"></span></div>
+<button id="menu" class="sec hide">Menu</button>
+<div id="pad"><button class="ar" id="bl" aria-label="Tourner à gauche">◀</button><button class="ar" id="br" aria-label="Tourner à droite">▶</button></div>
+<div id="pad2" class="hide"><button class="ar sm" id="bu" aria-label="Accélérer">▲</button><button class="ar sm" id="bd" aria-label="Freiner">▼</button></div>
+<div class="ov hide" id="shop"><h1>Garage</h1><p id="wl"></p><div id="list"></div><button id="back" class="sec">Retour</button></div>
+<div class="ov hide" id="diff"><h1>Conduite libre</h1><p>Choisis la difficulté du trafic.</p><p id="board"></p><button class="sec" data-d="0">Facile</button><button class="sec" data-d="1">Moyen</button><button class="sec" data-d="2">Difficile</button><button id="dback" class="sec">Retour</button></div>
+<div class="ov" id="ov">
+<h1 id="t"></h1><p id="m"></p>
+<button id="go"></button><button id="free" class="sec">Conduite libre</button><button id="gar" class="sec">Garage</button><button id="home" class="sec hide">Menu principal</button>
+</div></div>
+<script>
+const $=id=>document.getElementById(id),cv=$('c'),W=360,H=640;let ctx=cv.getContext('2d');
+const ov=$('ov'),sc=$('sc'),bs=$('bs'),shop=$('shop'),list=$('list'),wl=$('wl'),T=$('t'),M=$('m'),go=$('go'),menu=$('menu'),pad2=$('pad2');
+const LANES=[75,145,215,285],V=130,COL=['#b0302a','#2c5aa0','#d9dcdf','#2e3136','#d9a62b','#3b7a57','#6b6f76'];
+const CARS=[{n:'Flamme',c:'#ff5a36',p:0,h:1},{n:'Azur',c:'#2c6fd1',p:100,h:1.1},{n:'Taxi',c:'#e8b923',p:250,h:1.2},{n:'Forêt',c:'#2f8f5b',p:450,h:1.3},{n:'Phantom',c:'#1d2b4f',p:700,h:1.4},{n:'Néon',c:'#9a52e0',p:1000,h:1.5}];
+const LV=[['#2f5d50','#294f44'],['#7a6a42','#6a5b38'],['#35507a','#2c4468'],['#563f73','#483462'],['#6b3434','#582b2b']];
+let wallet=0,owned=[0],sel=0,lvl=1;
+try{wallet=+localStorage.getItem('cdn-w')||0;owned=JSON.parse(localStorage.getItem('cdn-o')||'[0]');sel=+localStorage.getItem('cdn-s')||0;lvl=Math.min(501,+localStorage.getItem('cdn-l')||1)}catch(e){}
+if(!owned.includes(sel))sel=0;
+function save(){try{localStorage.setItem('cdn-w',wallet);localStorage.setItem('cdn-o',JSON.stringify(owned));localStorage.setItem('cdn-s',sel);localStorage.setItem('cdn-l',lvl)}catch(e){}}
+let again='',rec=[0,0,0],fd=1,s,mode='champ',keys={l:0,r:0,u:0,d:0},touch=0,run=false,last=0;
+try{rec=JSON.parse(localStorage.getItem('cdn-r')||'[0,0,0]')}catch(e){}
+function saveRec(){try{localStorage.setItem('cdn-r',JSON.stringify(rec))}catch(e){}}
+function meters(){return Math.floor(s.dist/10.8)}
+function reset(m){mode=m;s={x:180,dist:0,off:0,obs:[],cns:[],ct:1,sf:1,gap:0,lastY:999,fs:350,speed:300,flash:0,ban:2,
+target:m==='champ'?6000+lvl*30:1e12,bt:m==='champ'?'Niveau '+lvl:'Conduite libre'}}
+function hudb(){sc.textContent=mode==='champ'?'Niv. '+lvl+' / 500':'Libre '+['facile','moyen','difficile'][fd]+' · '+Math.round(s.speed/3)+' km/h';bs.textContent=mode==='free'?(meters()>0&&meters()>=rec[fd]?'🏆 ':'')+meters()+' m':'🪙 '+wallet}
+function car(x,y,c,up){ctx.save();ctx.translate(x,y);if(!up)ctx.rotate(Math.PI);
+ctx.fillStyle='rgba(0,0,0,.35)';ctx.beginPath();ctx.roundRect(-16,-26,40,64,12);ctx.fill();
+ctx.fillStyle='#0a0a0a';[[-22,-20],[16,-20],[-22,14],[16,14]].forEach(w=>{ctx.beginPath();ctx.roundRect(w[0],w[1],6,17,2);ctx.fill()});
+ctx.fillStyle=c;ctx.beginPath();ctx.moveTo(-13,-33);ctx.quadraticCurveTo(0,-38,13,-33);ctx.lineTo(18,-22);ctx.lineTo(18,24);ctx.quadraticCurveTo(18,33,9,33);ctx.lineTo(-9,33);ctx.quadraticCurveTo(-18,33,-18,24);ctx.lineTo(-18,-22);ctx.closePath();ctx.fill();
+let g=ctx.createLinearGradient(-18,0,18,0);g.addColorStop(0,'rgba(0,0,0,.4)');g.addColorStop(.35,'rgba(255,255,255,.12)');g.addColorStop(.7,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,.4)');ctx.fillStyle=g;ctx.fill();
+ctx.fillStyle='rgba(0,0,0,.25)';ctx.fillRect(-13,-24,26,1.5);
+ctx.fillStyle=c;ctx.beginPath();ctx.roundRect(-22,-9,5,7,2);ctx.roundRect(17,-9,5,7,2);ctx.fill();
+let w=ctx.createLinearGradient(0,-17,0,-3);w.addColorStop(0,'#2a4a63');w.addColorStop(1,'#0c1822');ctx.fillStyle=w;ctx.beginPath();ctx.moveTo(-12,-16);ctx.lineTo(12,-16);ctx.lineTo(15,-4);ctx.lineTo(-15,-4);ctx.closePath();ctx.fill();
+ctx.fillStyle='rgba(255,255,255,.25)';ctx.beginPath();ctx.moveTo(-8,-15);ctx.lineTo(-3,-15);ctx.lineTo(-6,-5);ctx.lineTo(-11,-5);ctx.closePath();ctx.fill();
+ctx.fillStyle=c;ctx.beginPath();ctx.roundRect(-14,-3,28,17,3);ctx.fill();ctx.fillStyle='rgba(255,255,255,.16)';ctx.fill();
+ctx.fillStyle='#0c1822';ctx.beginPath();ctx.moveTo(-11,16);ctx.lineTo(11,16);ctx.lineTo(13,23);ctx.lineTo(-13,23);ctx.closePath();ctx.fill();
+ctx.shadowColor='#fff3b0';ctx.shadowBlur=up?10:4;ctx.fillStyle='#fff7cf';ctx.beginPath();ctx.roundRect(-16,-31,9,3.5,1.5);ctx.roundRect(7,-31,9,3.5,1.5);ctx.fill();
+ctx.shadowColor='#f22';ctx.shadowBlur=6;ctx.fillStyle='#e02020';ctx.fillRect(-16,29,9,3);ctx.fillRect(7,29,9,3);ctx.restore()}
+function draw(){
+const P=LV[(mode==='champ'?lvl-1:Math.floor(s.dist/15000))%LV.length];
+ctx.fillStyle=P[0];ctx.fillRect(0,0,W,H);
+ctx.fillStyle=P[1];for(let i=-1;i<9;i++){const y=((i*90+s.off*0.6)%720)-80;ctx.fillRect(8,y,14,40);ctx.fillRect(338,y+45,14,40)}
+ctx.fillStyle='#2b313c';ctx.fillRect(40,0,280,H);
+const k=40;for(let y=-k*2+(s.off%(k*2));y<H;y+=k*2){ctx.fillStyle='#f4ead5';ctx.fillRect(34,y,6,k);ctx.fillRect(320,y,6,k);ctx.fillStyle='#d6402a';ctx.fillRect(34,y+k,6,k);ctx.fillRect(320,y+k,6,k)}
+ctx.fillStyle='rgba(244,234,213,.7)';for(let l=1;l<4;l++)for(let y=-60+(s.off%120);y<H;y+=120)ctx.fillRect(40+l*70-2,y,4,50);
+for(const c of s.cns){ctx.fillStyle='#f5c518';ctx.beginPath();ctx.arc(c.x,c.y,9,0,7);ctx.fill();ctx.fillStyle='#b8860b';ctx.fillRect(c.x-2,c.y-5,4,10)}
+for(const o of s.obs)car(o.x,o.y,o.c,false);
+car(s.x,520,CARS[sel].c,true);
+if(mode==='champ'){ctx.fillStyle='rgba(244,234,213,.25)';ctx.fillRect(14,44,W-28,5);ctx.fillStyle='#f5c518';ctx.fillRect(14,44,(W-28)*Math.min(1,s.dist/s.target),5)}
+if(s.ban>0){ctx.globalAlpha=Math.min(1,s.ban);ctx.fillStyle='#f4ead5';ctx.textAlign='center';ctx.font='bold 40px sans-serif';ctx.fillText(s.bt,W/2,220);ctx.globalAlpha=1}
+if(s.flash>0){ctx.fillStyle='rgba(255,255,255,'+s.flash+')';ctx.fillRect(0,0,W,H)}}
+function hit(ax,ay,bx,by){return Math.abs(ax-bx)<30&&Math.abs(ay-by)<58}
+function step(dt){
+if(mode==='free'){s.fs=Math.max(V,Math.min(800,s.fs+(keys.u-keys.d)*300*dt+(!keys.u&&!keys.d&&s.fs<350?200*dt:0)));s.speed=s.fs}
+else s.speed=Math.min(260+lvl*1.1,800);
+s.x+=((keys.r||touch>0?1:0)-(keys.l||touch<0?1:0))*270*CARS[sel].h*dt;s.x=Math.max(60,Math.min(300,s.x));
+s.off+=s.speed*dt;s.dist+=s.speed*dt;if(s.ban>0)s.ban-=dt;
+{
+s.lastY+=(s.speed-V)*dt;
+if(s.lastY>=s.gap-70){const sf=Math.max(0,Math.min(3,s.sf+(Math.random()*3|0)-1));s.sf=sf;
+const n=mode==='free'?1+(Math.random()<[0,.3,.6][fd]?1:0)+(fd===2&&Math.random()<.25?1:0):1+(Math.random()<Math.min(.2+lvl*.0012,.7)?1:0)+(lvl>150&&Math.random()<.25?1:0);
+[0,1,2,3].filter(i=>i!==sf).sort(()=>Math.random()-.5).slice(0,n).forEach(i=>s.obs.push({x:LANES[i],y:-70,c:COL[Math.random()*COL.length|0]}));
+if(mode==='champ'&&Math.random()<.7)s.cns.push({x:LANES[sf],y:-70});
+s.lastY=-70;s.gap=(mode==='free'?[1.5,1,.8][fd]:1)*(156+(s.speed-V)*.4+40)+Math.random()*50}
+for(const o of s.obs){o.y+=(s.speed-V)*dt;if(hit(s.x,520,o.x,o.y)){over();return}}
+s.obs=s.obs.filter(o=>o.y<H+80);
+}
+for(const c of s.cns){c.y+=(s.speed-V)*dt;if(Math.abs(c.x-s.x)<26&&Math.abs(c.y-520)<42){c.y=9999;wallet++}}
+s.cns=s.cns.filter(c=>c.y<H+40);if(mode==='free'&&meters()>rec[fd])rec[fd]=meters();
+hudb();
+if(mode==='champ'&&s.dist>=s.target)win()}
+function showMenu(t,m,b){const f=again==='free';$('free').textContent=f?'Changer de difficulté':'Conduite libre';$('gar').classList.toggle('hide',f);$('home').classList.toggle('hide',!f);run=false;T.textContent=t;M.textContent=m;go.textContent=b;menu.classList.add('hide');pad2.classList.add('hide');ov.classList.remove('hide');hudb()}
+function home(){again='';showMenu(lvl>500?'🏆 Champion !':'Course de nuit','Championnat : 500 niveaux, avec toujours un passage et des pièces à prendre. Conduite libre : roule sans limite, avec du trafic mais sans pièces. Touche la moitié de l’écran ou utilise les flèches.',lvl>500?'Rejouer le championnat':lvl>1?'Championnat · niveau '+lvl:'Championnat · 500 niveaux')}
+function over(){run=false;s.flash=.8;draw();save();if(mode==='free'){if(meters()>rec[fd])rec[fd]=meters();saveRec();again='free';const dn=['facile','moyen','difficile'][fd];showMenu('Accident !',meters()+' m — record '+dn+' : '+rec[fd]+' m.','Rejouer ('+dn+')');return}showMenu('Accident !','Niveau '+lvl+' / 500 — '+Math.floor(s.dist/s.target*100)+' % parcouru.','Rejouer le niveau '+lvl)}
+function win(){run=false;wallet+=10;lvl++;save();
+if(lvl>500)showMenu('🏆 Champion !','Tu as terminé les 500 niveaux ! +10 pièces. Tu es le champion de la route.','Rejouer le championnat');
+else showMenu('Niveau terminé !','+10 pièces. Prochain défi : niveau '+lvl+' / 500.','Niveau suivant')}
+function begin(m){again='';reset(m);ov.classList.add('hide');shop.classList.add('hide');menu.classList.toggle('hide',m!=='free');pad2.classList.toggle('hide',m!=='free');run=true;hudb();last=performance.now();requestAnimationFrame(loop)}
+function loop(t){if(!run)return;const dt=Math.min((t-last)/1000,0.05);last=t;step(dt);if(run)draw();requestAnimationFrame(loop)}
+go.onclick=()=>{if(again==='free'){begin('free');return}if(lvl>500){lvl=1;save()}begin('champ')};
+$('free').onclick=()=>{$('board').innerHTML='🏆 Records<br>Facile : '+rec[0]+' m<br>Moyen : '+rec[1]+' m<br>Difficile : '+rec[2]+' m';ov.classList.add('hide');$('diff').classList.remove('hide')};
+document.querySelectorAll('#diff [data-d]').forEach(b=>b.onclick=()=>{fd=+b.dataset.d;$('diff').classList.add('hide');begin('free')});
+$('dback').onclick=()=>{$('diff').classList.add('hide');ov.classList.remove('hide')};
+$('home').onclick=()=>home();menu.onclick=()=>{saveRec();run=false;home()};addEventListener('pagehide',saveRec);document.addEventListener('visibilitychange',()=>{if(document.hidden)saveRec()});
+addEventListener('keydown',e=>{const k=e.key;if(k==='ArrowLeft'||k==='a'||k==='A')keys.l=1;if(k==='ArrowRight'||k==='d'||k==='D')keys.r=1;if(k==='ArrowUp'||k==='w'||k==='W')keys.u=1;if(k==='ArrowDown'||k==='s'||k==='S')keys.d=1;
+if(!run&&!ov.classList.contains('hide')&&(k==='Enter'||k===' '))go.click()});
+addEventListener('keyup',e=>{const k=e.key;if(k==='ArrowLeft'||k==='a'||k==='A')keys.l=0;if(k==='ArrowRight'||k==='d'||k==='D')keys.r=0;if(k==='ArrowUp'||k==='w'||k==='W')keys.u=0;if(k==='ArrowDown'||k==='s'||k==='S')keys.d=0});
+function pt(e){const r=cv.getBoundingClientRect();touch=(e.clientX-r.left)<r.width/2?-1:1}
+cv.addEventListener('pointerdown',pt);cv.addEventListener('pointermove',e=>{if(e.buttons||e.pointerType==='touch')pt(e)});
+addEventListener('pointerup',()=>touch=0);addEventListener('pointercancel',()=>touch=0);
+[['bl','l'],['br','r'],['bu','u'],['bd','d']].forEach(([id,k])=>{const b=$(id);
+const on=e=>{e.preventDefault();keys[k]=1;b.classList.add('on')},off=()=>{keys[k]=0;b.classList.remove('on')};
+b.addEventListener('pointerdown',on);['pointerup','pointerleave','pointercancel'].forEach(n=>b.addEventListener(n,off))});
+const mctx=ctx;
+function renderShop(){wl.textContent='🪙 '+wallet+' pièces';list.innerHTML='';
+CARS.forEach((k,i)=>{const r=document.createElement('div');r.className='row';
+const pc=document.createElement('canvas');pc.width=56;pc.height=80;pc.style.cssText='width:42px;height:60px;flex:none;background:#2b313c;border-radius:6px';
+ctx=pc.getContext('2d');car(28,40,k.c,true);ctx=mctx;
+const d=document.createElement('div');d.innerHTML='<b>'+k.n+'</b><small>Maniabilité '+Math.round(k.h*100)+' %</small>';
+const b=document.createElement('button');
+if(owned.includes(i)){b.textContent=i===sel?'Équipée':'Choisir';b.disabled=i===sel;b.onclick=()=>{sel=i;save();renderShop()}}
+else{b.textContent='🪙 '+k.p;b.disabled=wallet<k.p;b.onclick=()=>{wallet-=k.p;owned.push(i);sel=i;save();hudb();renderShop()}}
+r.append(pc,d,b);list.append(r)})}
+$('gar').onclick=()=>{ov.classList.add('hide');renderShop();shop.classList.remove('hide')};
+$('back').onclick=()=>{shop.classList.add('hide');ov.classList.remove('hide')};
+reset('champ');draw();home();
+<\/script></body></html>
+</script>
+<script>
+document.getElementById('gf').srcdoc=document.getElementById('gsrc').textContent.replace(/<\\\/script>/g,'<'+'/script>');
+/* PUBLICITÉS : remplis ces deux lignes après l'approbation d'AdSense */
+var PUB='',SLOT='';
+(function(){var z=document.querySelectorAll('.ad');if(!PUB||!SLOT||!z.length)return;
+var s=document.createElement('script');s.async=true;s.crossOrigin='anonymous';s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+PUB;document.head.appendChild(s);
+z.forEach(function(a){a.setAttribute('data-on','1');a.innerHTML='<ins class="adsbygoogle" style="display:block" data-ad-client="'+PUB+'" data-ad-slot="'+SLOT+'" data-ad-format="auto" data-full-width-responsive="true"></ins>';(window.adsbygoogle=window.adsbygoogle||[]).push({})})})();
+</script>
+</body></html>
